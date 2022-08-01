@@ -17,5 +17,23 @@ const tasks = [
   // El +1 y +2 en Date.now del array sólo se dejo con fines de prueba para evitar repetir el id.
   
   //-------------------------------------------------------------------------------
+ 
+  //Button add new task.
+    button.addEventListener("click", () => {
+    if (inputTask.value == "") {
+      alert("Debe ingresar un tarea - You must enter a task")
+    }else{
+      
+    const newTask = inputTask.value;
+    tasks.push({ id: Date.now(), tarea: newTask, status: false });
+    inputTask.value = "";
+    
+    listTask.innerHTML = render();
+    countTask.innerHTML = "Cantidad de Tareas: " + tasks.length;
+    countTaskComplete();
+  
+    }
+  });
+
 
   
