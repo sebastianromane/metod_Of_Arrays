@@ -88,8 +88,14 @@ const countTaskComplete = function () {
     taskComplete.innerHTML = "Tareas completadas: " + cuentaTareas;
   };
   
+
+//--------------------------------------------------------------------------------
   
-  //--------------------------------------------------------------------------------
   
+//initial charge
+
+countTaskComplete();
+listTask.innerHTML = render();
+countTask.innerHTML = "Cantidad de Tareas: " + tasks.length;
 
   
