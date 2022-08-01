@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(55, 77, 203);
+    color: aliceblue;
+}
+
+#listTask{
+    display: flex;
+    flex-direction: column;
+    border-style:double;
+    justify-content:end;
+    align-content:flex-end;
+    background-color: #e9ef46;
+    padding: 10px;
+    color: black;
+}
+
+/* Class of the items of list */
+.f1 {
+    display: inline-block; 
+    width: 150px;
+    border-right: 1px solid;
+  }
+
+li{
+    list-style: none;
+    width: 600px;
+    border: 1px solid;
+}
