@@ -34,6 +34,26 @@ const tasks = [
   
     }
   });
+//-------------------------------------------------------------------------------
 
+// insert function render.
+function render() {
+    let html = "";
+    for (let chore of tasks) {
+      if (chore.status == true) {
+        chequear = "checked";
+      } else {
+        chequear = "";
+      }
+      html += `<li>
+                  <span class="f1"> ${chore.id} </span>
+                  <span class="f1">${chore.tarea} </span>
+                  <input class="f1" type="checkbox" id="opt_${chore.id}" ${chequear} onclick="updateTask(${chore.id})" value="first_checkbox">
+                  <button onclick="deleteTask(${chore.id})"> Eliminar </button>
+              </li>`;
+    }
+    return html;
+  }
+  
 
   
