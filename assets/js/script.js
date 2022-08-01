@@ -82,5 +82,14 @@ let updateTask = (id) => {
   
   //--------------------------------------------------------------------------------
   
+//function to count completed tasks
+const countTaskComplete = function () {
+    cuentaTareas = tasks.filter(({ status }) => status === true).length;
+    taskComplete.innerHTML = "Tareas completadas: " + cuentaTareas;
+  };
+  
+  
+  //--------------------------------------------------------------------------------
+  
 
   
