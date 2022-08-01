@@ -54,6 +54,19 @@ function render() {
     }
     return html;
   }
+  //-------------------------------------------------------------------------------
+
+//Function of Button onclick delete task.
+let deleteTask = (id) => {
+    const index = tasks.findIndex((ele) => ele.id == id);
+    tasks.splice(index, 1);
+  
+    listTask.innerHTML = render();
+    countTask.innerHTML = "Cantidad de Tareas: " + tasks.length;
+    countTaskComplete();
+  };
+  
+  //--------------------------------------------------------------------------------
   
 
   
