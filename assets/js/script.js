@@ -67,6 +67,20 @@ let deleteTask = (id) => {
   };
   
   //--------------------------------------------------------------------------------
+  //Function of checkbox onclick update task.
+let updateTask = (id) => {
+    const index = tasks.findIndex((ele) => ele.id == id);
+    if (document.querySelector("#opt_" + id).checked == true) {
+      tasks[index].status = true;
+    } else {
+      tasks[index].status = false;
+    }
+    countTaskComplete();
+    console.log(tasks);
+  };
+  
+  
+  //--------------------------------------------------------------------------------
   
 
   
